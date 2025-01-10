@@ -1,0 +1,65 @@
+.header{
+    max-height: 50%;
+    max-width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.header img{
+    max-width: 50%;
+    max-height: auto;
+}
+
+body {
+    background-color: #3C4A57;
+  }
+
+.intro img{
+    max-width: 15%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav {
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #58B8E8;
+    opacity: 0.6;
+    margin-bottom: 1vw;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+}
+
+/* Style the topnav links */
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.9vw 0.7vw;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Change color on hover */
+.nav a:hover {
+    background-color: #ff8800;
+    color: #ffffff;
+}
+
+.footer{
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    padding-top: 0.5%;
+    text-align: center;
+    background: #3C4A57;
+    margin-top: 0.4vw;
+    color: azure;
+    font-size: 0.5vw;
+    text-align: right;
+}
+
+
+
