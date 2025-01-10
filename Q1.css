@@ -3,12 +3,24 @@
     margin: auto;
     width: 50%;
     border-color: #58B8E8;
-    border-width: 0.2cm;
+    border-width: 0.2vw;
 }
 
 .header{
-    max-height: 50%;
-    max-width: auto;
+  max-height: 50%;
+  max-width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.header img{
+  max-width: 50%;
+  max-height: auto;
+}
+
+.image{
+  display: flex;
+  justify-content: center;
 }
 
 body {
@@ -17,6 +29,10 @@ body {
 
 .label{
     color: azure;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    padding: 0.5vw;
+    margin: 0.5vw;
 }
 
 .input{
@@ -24,48 +40,84 @@ body {
     opacity: 0.3;
     border-color: #58B8E8;
     color: rgb(0, 0, 0);
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    border-radius: 0.5vw;
+    width: 40vw;
+    height: 1.5vw;
+    font-size: 1vw;
+    padding: 0.2vw;
+    margin: 0.5vw;
 }
 
 .placeholder{
     color:rgb(255, 255, 255);
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
 }
 
 .footer{
-    padding: 20px;
-    text-align: center;
-    background: #3C4A57;
-    margin-top: 50px;
-    color: azure;
-    font-size: 0.5vw;
-    text-align: right;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  padding-top: 0.5%;
+  text-align: center;
+  background: #3C4A57;
+  margin-top: 0.4vw;
+  color: azure;
+  font-size: 0.5vw;
+  text-align: right;
 }
 
 .nav {
-    overflow: hidden;
-    background-color: #58B8E8;
-    opacity: 0.6;
-    margin-bottom: 10px;
-  }
-  
-  /* Style the topnav links */
-  .nav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .nav a:hover {
-    background-color: #ff8800;
-    color: #ffffff;
-  }
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #58B8E8;
+  opacity: 0.6;
+  margin-bottom: 0.5vw;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+}
 
-  .Title{
-    color: azure;
-    text-align: center;
-    font-size:5vw;
-    text-shadow: 2px 2px 5px #ff8800;
-  }
+/* Style the topnav links */
+.nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.9vw 0.7vw;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Change color on hover */
+.nav a:hover {
+  background-color: #ff8800;
+  color: #ffffff;
+}
+
+.Title{
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  color: azure;
+  text-align: center;
+  font-size:2vw;
+  text-shadow: 0.2vw 0.2vw 0.3vw #ff8800;
+}
+
+.button {
+  margin: 0.5vw;
+  display: flex;
+  justify-content: center;
+  background-color: #72e672;
+  border-radius: 0.5vw;
+  padding: 0.8vw 1vw;
+  border: 0.2vw solid #55c555; 
+  font-size: 1vw;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+}
+
+.button:hover{
+  background-color: #55c555;
+}
