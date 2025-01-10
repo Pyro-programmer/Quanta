@@ -36,7 +36,7 @@ body {
     background: #3C4A57;
     margin-top: 50px;
     color: azure;
-    font-size: 10vw;
+    font-size: 5px;
     text-align: right;
 }
 
@@ -45,7 +45,7 @@ body {
     margin-bottom: 40px;
     color: azure;
     text-align: center;
-    font-size: 5vw;
+    font-size: 20px;
     padding: 10px;
 }
 
@@ -64,6 +64,6 @@ body {
 }
 
 .Founders h1{
-    font-size:40vw;
+    font-size:20px;
     text-shadow: 2px 2px 5px #ff8800;
 }
