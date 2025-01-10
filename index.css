@@ -1,6 +1,13 @@
 .header{
     max-height: 50%;
     max-width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.header img{
+    max-width: 50%;
+    max-height: auto;
 }
 
 body {
@@ -8,10 +15,13 @@ body {
   }
 
 .nav {
+    max-width: 100%;
     overflow: hidden;
     background-color: #58B8E8;
     opacity: 0.6;
-    margin-bottom: 10px;
+    margin-bottom: 1vw;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
 }
 
 /* Style the topnav links */
@@ -20,8 +30,9 @@ body {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 0.9vw 0.7vw;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Change color on hover */
@@ -31,39 +42,50 @@ body {
 }
 
 .footer{
-    padding: 20px;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    padding-top: 0.5%;
     text-align: center;
     background: #3C4A57;
-    margin-top: 50px;
+    margin-top: 0.4vw;
     color: azure;
     font-size: 0.5vw;
     text-align: right;
 }
 
 .intro{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding: 0.5%;
     color: azure;
     text-align: center;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
     font-size: 1vw;
-    padding: 10px;
+    margin:0.5%;
 }
 
 .intro h1{
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
     font-size:3.5vw;
-    text-shadow: 2px 2px 5px #ff8800;
+    text-shadow: 0.2vw 0.2vw 0.3vw #ff8800;
 }
 
 
 .Founders{
-    margin-bottom: 200px;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
     color: azure;
     text-align: center;
     font-size: 1vw;
-    padding: 10px;
+    padding-top: 0.2vw;
+    padding-bottom: 2vw;
+    margin-top: 0.2vw;
+    margin-bottom: 2vw;
 }
 
 .Founders h1{
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
     font-size:3.5vw;
-    text-shadow: 2px 2px 5px #ff8800;
+    text-shadow: 0.2vw 0.2vw 0.3vw #ff8800;
 }
