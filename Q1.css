@@ -56,12 +56,17 @@ body {
 }
 
 /* Image */
-.image {
+.image{
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.image img{
   display: flex;
   justify-content: center;
   margin: auto;
-  width: 80%; /* Adjust width for responsiveness */
-  max-width: 600px; /* Prevent image from being too large */
+  height: auto;
+  max-width: 80%; /* Prevent image from being too large */
 }
 
 /* Form Labels */
@@ -131,8 +136,8 @@ body {
       font-size: 0.9rem;
   }
 
-  .image {
-      width: 70%; /* Slightly smaller images */
+  .image img {
+      max-width: 75%; /* Slightly smaller images */
   }
 
   .input {
@@ -156,8 +161,8 @@ body {
       font-size: 0.8rem; /* Smaller font size for mobile */
   }
 
-  .image {
-      width: 90%; /* Maximize image size for small screens */
+  .image img{
+      max-width: 95%; /* Maximize image size for small screens */
   }
 
   .label {
