@@ -28,7 +28,7 @@ body {
     margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
 }
 
 .nav a {
