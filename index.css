@@ -93,14 +93,16 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav {
-        flex-direction: column;
+        flex-direction: column; /* Stack links vertically */
+        padding: 0.5rem 0; /* Reduce padding around the nav container */
     }
 
     .nav a {
-        width: 100%;
-        text-align: center;
-        padding: 1rem;
+        font-size: 0.9rem; /* Smaller font size for links */
+        padding: 0.5rem 0.7rem; /* Tighten up padding for smaller links */
+        margin: 0.2rem 0; /* Add a small margin for spacing between links */
     }
+
 
     .intro,
     .Founders {
@@ -119,5 +121,14 @@ body {
 
     .footer {
         font-size: 0.8rem;
+    }
+    .nav {
+        padding: 0.3rem 0; /* Shrink padding further for smaller screens */
+    }
+
+    .nav a {
+        font-size: 0.8rem; /* Reduce font size further */
+        padding: 0.3rem 0.5rem; /* Tight padding for compact links */
+        margin: 0.1rem 0; /* Minimal margin to save space */
     }
 }
