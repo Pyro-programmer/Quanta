@@ -1,65 +1,108 @@
-.header{
-    max-height: 50%;
-    max-width: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.header img{
-    max-width: 50%;
-    max-height: auto;
-}
-
+/* General Styles */
 body {
     background-color: #3C4A57;
-  }
+    margin: 0;
+    font-family: "Roboto", serif;
+}
 
-.intro img{
-    max-width: 15%;
-    height: auto;
+/* Header */
+.header {
+    max-height: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin: 1rem auto; /* Center container horizontally */
+}
+
+.intro img {
+    max-width: 80%; /* Default size for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    margin: auto; /* Center the image horizontally */
+    display: flex; /* Ensure proper centering */
     justify-content: center;
 }
 
-
+/* Navigation */
 .nav {
     max-width: 100%;
     overflow: hidden;
     background-color: #58B8E8;
     opacity: 0.6;
-    margin-bottom: 1vw;
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Style the topnav links */
 .nav a {
-    float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 0.9vw 0.7vw;
+    padding: 0.9rem 1rem;
     text-decoration: none;
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Responsive font size */
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Change color on hover */
 .nav a:hover {
     background-color: #ff8800;
     color: #ffffff;
 }
 
-.footer{
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
-    padding-top: 0.5%;
-    text-align: center;
-    background: #3C4A57;
-    margin-top: 0.4vw;
-    color: azure;
-    font-size: 0.5vw;
+/* Footer */
+.footer {
+    padding: 1rem;
     text-align: right;
+    background: #3C4A57;
+    color: azure;
+    font-size: clamp(0.5rem, 0.8vw, 0.6rem); /* Responsive font size */
 }
 
+/* Responsive Design */
 
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column; /* Stack navigation links */
+    }
 
+    .nav a {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .intro img {
+        max-width: 70%; /* Increase size for better visibility on tablets */
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 480px) {
+    .nav {
+        padding: 0.5rem 0;
+    }
+
+    .nav a {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.8rem; /* Smaller font size for mobile */
+    }
+
+    .footer {
+        font-size: 0.7rem; /* Smaller footer text */
+    }
+
+    .intro img {
+        max-width: 90%; /* Increase size for smaller screens */
+    }
+}
