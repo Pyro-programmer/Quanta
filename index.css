@@ -24,11 +24,11 @@ body {
     width: 100%;
     overflow: hidden;
     background-color: #58B8E8;
-    opacity: 0.9;
+    opacity: 0.6;
     margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
 }
 
 .nav a {
@@ -83,12 +83,11 @@ body {
 /* Footer */
 .footer {
     padding: 1rem;
-    text-align: center;
+    text-align: right;
     background: #3C4A57;
     color: azure;
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
-    margin-top: 1rem;
-}
+    font-size: clamp(0.5rem, 0.8vw, 0.6rem); /* Responsive font size */
+  }
 
 /* Responsive Design */
 @media (max-width: 768px) {
