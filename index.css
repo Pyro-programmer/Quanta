@@ -1,91 +1,123 @@
-.header{
+/* General Styles */
+body {
+    background-color: #3C4A57;
+    margin: 0;
+    font-family: "Roboto", serif;
+}
+
+/* Header */
+.header {
     max-height: 50%;
-    max-width: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation Bar */
+.nav {
+    width: 100%;
+    overflow: hidden;
+    background-color: #58B8E8;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-.header img{
-    max-width: 50%;
-    max-height: auto;
-}
-
-body {
-    background-color: #3C4A57;
-  }
-
-.nav {
-    max-width: 100%;
-    overflow: hidden;
-    background-color: #58B8E8;
-    opacity: 0.6;
-    margin-bottom: 1vw;
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
-}
-
-/* Style the topnav links */
 .nav a {
-    float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 0.9vw 0.7vw;
+    padding: 0.9rem 1rem;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
 }
 
-/* Change color on hover */
 .nav a:hover {
     background-color: #ff8800;
     color: #ffffff;
 }
 
-.footer{
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
-    padding-top: 0.5%;
+/* Intro Section */
+.intro {
+    padding: 1rem;
+    color: azure;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-shadow: 0.2rem 0.2rem 0.3rem #ff8800;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Founders Section */
+.Founders {
+    padding: 1rem;
+    color: azure;
+    text-align: center;
+}
+
+.Founders h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-shadow: 0.2rem 0.2rem 0.3rem #ff8800;
+    margin-bottom: 1rem;
+}
+
+.Founders p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Footer */
+.footer {
+    padding: 1rem;
     text-align: center;
     background: #3C4A57;
-    margin-top: 0.4vw;
     color: azure;
-    font-size: 0.5vw;
-    text-align: right;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    margin-top: 1rem;
 }
 
-.intro{
-    padding: 0.5%;
-    color: azure;
-    text-align: center;
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
-    font-size: 1vw;
-    margin:0.5%;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .intro,
+    .Founders {
+        padding: 1rem;
+    }
 }
 
-.intro h1{
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
-    font-size:3.5vw;
-    text-shadow: 0.2vw 0.2vw 0.3vw #ff8800;
-}
+@media (max-width: 480px) {
+    .intro h1, .Founders h1 {
+        font-size: 2rem;
+    }
 
+    .intro p, .Founders p {
+        font-size: 1rem;
+    }
 
-.Founders{
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
-    color: azure;
-    text-align: center;
-    font-size: 1vw;
-    padding-top: 0.2vw;
-    padding-bottom: 2vw;
-    margin-top: 0.2vw;
-    margin-bottom: 2vw;
-}
-
-.Founders h1{
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
-    font-size:3.5vw;
-    text-shadow: 0.2vw 0.2vw 0.3vw #ff8800;
+    .footer {
+        font-size: 0.8rem;
+    }
 }
