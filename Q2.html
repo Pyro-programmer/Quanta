@@ -103,60 +103,45 @@
 
 
     <script>
-      // Define the correct answer
-      const correctAnswer = 34.4; // Replace with your correct answer
-    
-      // Listen for form submission
+
       document.getElementById("submission-form").addEventListener("submit", function (e) {
-        e.preventDefault(); // Prevent default form submission
-    
-        const form = e.target; // Get the form element
-        const formData = new FormData(form); // Collect form data
-    
-        // Get the answer input value
-        const enteredAnswer = parseFloat(formData.get("Answer"), 10); // Convert answer to an integer
-    
-        // Validate the answer
-        if (enteredAnswer === correctAnswer) {
-          // If the answer is correct, submit the form
-          fetch(form.action, {
-            method: "POST",
-            body: formData,
+        e.preventDefault(); 
+
+
+        const form = e.target;
+        const formData = new FormData(form);
+
+
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+
+            if (!response.headers.get("content-type").includes("application/json")) {
+              throw new Error("Invalid response format");
+            }
+            return response.json();
           })
-            .then((response) => response.json()) // Parse the JSON response
-            .then((data) => {
-              if (data.status === "success") {
-                // Display success message
-                const messageElement = document.getElementById("message");
-                messageElement.style.display = "block";
-                messageElement.style.color = "green";
-                messageElement.style.fontFamily = "Roboto", "serif";
-                messageElement.innerText = "Correct answer!";
-              } else {
-                // Display error message
-                const messageElement = document.getElementById("message");
-                messageElement.style.display = "block";
-                messageElement.style.color = "red";
-                messageElement.style.fontFamily = "Roboto", "serif";
-                messageElement.innerText = `Error: ${data.message}`;
-              }
-            })
-            .catch((error) => {
-              // Handle network or other errors
-              const messageElement = document.getElementById("message");
-              messageElement.style.display = "block";
+          .then((data) => {
+
+            const messageElement = document.getElementById("message");
+            messageElement.style.display = "block";
+            if (data.status === "success") {
+              messageElement.style.color = "green";
+              messageElement.innerText = data.message;
+            } else {
               messageElement.style.color = "red";
-              messageElement.style.fontFamily = "Roboto", "serif";
-              messageElement.innerText = `Error: ${error.message}`;
-            });
-        } else {
-          // If the answer is incorrect, show an error message
-          const messageElement = document.getElementById("message");
-          messageElement.style.display = "block";
-          messageElement.style.color = "red";
-          messageElement.style.fontFamily = "Roboto", "serif";
-          messageElement.innerText = "Incorrect answer. Please try again.";
-        }
+              messageElement.innerText = data.message;
+            }
+          })
+          .catch((error) => {
+
+            const messageElement = document.getElementById("message");
+            messageElement.style.display = "block";
+            messageElement.style.color = "red";
+            messageElement.innerText = `Error: ${error.message}`;
+          });
       });
     </script>
     
